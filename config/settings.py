@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-sm2n_ewz9!l5bj7j()q(8tcnsuh6g8yau&!%5a*p7e&qktz9%#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["farukShihab.pythonanywhere.com","127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -41,6 +41,10 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://your-vercel-app.vercel.app",
 ]
 
 INSTALLED_APPS = [
@@ -59,7 +63,8 @@ INSTALLED_APPS = [
     # Local Apps
     "apps.authentication",
     "apps.tasks",
-    "apps.annotations"
+    "apps.annotations",
+
 ]
 
 AUTH_USER_MODEL = "authentication.User"
@@ -152,7 +157,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
