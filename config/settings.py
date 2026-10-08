@@ -43,10 +43,6 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://your-vercel-app.vercel.app",
-]
-
 INSTALLED_APPS = [
     # Django
     "django.contrib.admin",
@@ -162,6 +158,13 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://task-flow-git-dev-faruk-shihab.vercel.app",
+    "https://task-flow.vercel.app",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://farukshihab.pythonanywhere.com",
+    "https://task-flow-git-dev-faruk-shihab.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
